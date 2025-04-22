@@ -17,7 +17,15 @@ public class FishViewModel extends AndroidViewModel {
         repo = new FishRepository(app);
         allFish = repo.getAllFish();
     }
-    public LiveData<List<Fish>> getAllFish() { return allFish; }
+    public LiveData<List<Fish>> getAllFish() {
+        return repo.getAllFish();
+    }
     public LiveData<List<Fish>> search(String q) { return repo.searchFish(q); }
     public void update(Fish fish) { repo.update(fish); }
+    public LiveData<List<Fish>> filter(String name, String habitat, String season) {
+        return repo.filterFish(name, habitat, season);
+    }
+    public LiveData<List<Fish>> getFavorites() {
+        return repo.getFavoriteFish();
+    }
 }

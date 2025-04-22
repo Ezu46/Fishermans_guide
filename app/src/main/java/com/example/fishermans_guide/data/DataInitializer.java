@@ -1,5 +1,7 @@
 package com.example.fishermans_guide.data;
 
+import android.util.Log;
+
 import com.example.fishermans_guide.model.Fish;
 import com.example.fishermans_guide.R;
 import java.util.ArrayList;
@@ -108,7 +110,7 @@ public class DataInitializer {
         dace.imageResId = R.drawable.dace;
         dace.isFavorite = false;
         list.add(dace);
-
+        Log.d("DB", "Prepopulate " + list.size() + " fishes");
         return list;
     }
 }

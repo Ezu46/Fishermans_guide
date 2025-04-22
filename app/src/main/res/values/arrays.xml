@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="habitats">
+        <item>Все</item>
+        <item>Горные реки и быстрые ручьи</item>
+        <item>Пресноводные озёра и медленные реки</item>
+    </string-array>
+
+    <string-array name="seasons">
+        <item>Все</item>
+        <item>Май–сентябрь</item>
+        <item>Апрель–октябрь</item>
+    </string-array>
+</resources>

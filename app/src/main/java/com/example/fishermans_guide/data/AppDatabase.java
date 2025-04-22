@@ -11,7 +11,7 @@ import com.example.fishermans_guide.model.Note;
 import java.util.List;
 import java.util.concurrent.Executors;
 
-@Database(entities = {Fish.class, Note.class}, version = 1)
+@Database(entities = {Fish.class, Note.class}, version = 2, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     public abstract FishDao fishDao();
     public abstract NoteDao noteDao();

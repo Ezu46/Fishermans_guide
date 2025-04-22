@@ -9,8 +9,8 @@
         android:id="@+id/fishThumb"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:adjustViewBounds="true"
         android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
@@ -26,5 +26,17 @@
         app:layout_constraintStart_toEndOf="@id/fishThumb"
         app:layout_constraintTop_toTopOf="@id/fishThumb"
         app:layout_constraintBottom_toBottomOf="@id/fishThumb"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toStartOf="@id/favIcon" />
+
+    <ImageButton
+        android:id="@+id/favIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="Избранное"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/ic_star" />
 </androidx.constraintlayout.widget.ConstraintLayout>

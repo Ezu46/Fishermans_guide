@@ -20,8 +20,18 @@ public class FishRepository {
     public LiveData<List<Fish>> searchFish(String q) {
         return fishDao.searchFish("%"+q+"%");
     }
+
     public void update(Fish fish) {
         Executors.newSingleThreadExecutor()
                 .execute(() -> fishDao.updateFish(fish));
+    }
+    public LiveData<List<Fish>> getFavoriteFish() {
+        return fishDao.getFavoriteFish();
+    }
+    public LiveData<List<Fish>> filterFish(String name, String habitat, String season) {
+        String q = (name == null || name.isEmpty()) ? null : "%" + name + "%";
+        String h = "Все".equals(habitat) ? null : habitat;
+        String s = "Все".equals(season) ? null : season;
+        return fishDao.filterFish(q, h, s);
     }
 }
